@@ -22,7 +22,8 @@ public class AutorController {
 		return ResponseEntity.ok(service.listaAutor());
 	}
 	
-	@PostMapping
+	@PostMapping(
+			  value = "/inserta", consumes = "application/json", produces = "application/json")
 	public ResponseEntity<Autor> inserta(@RequestBody Autor obj){
 		return ResponseEntity.ok(service.insertarAutor(obj));
 	}
